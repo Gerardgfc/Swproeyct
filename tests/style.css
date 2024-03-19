@@ -11,18 +11,7 @@ body {
     background: linear-gradient(to right, #003366, #33cccc );
     }
 
-main {
-    background: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 480px;
-    display:grid;
-    gap: 30px;
-    box-shadow: 0 0 5px,0 5px 10px;
-    position: relative;
-    overflow: hidden;
-}
+
 
 button{
     border: none;
@@ -52,7 +41,7 @@ button{
 }
 
 .control input{
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     text-align: end;
     background: transparent;
     width: 100%;
@@ -66,13 +55,20 @@ button{
     appearance: none;
 }
 
+.controls p{
+    color:red;
+    width: 100%;
+    font-size: 1rem;
+    padding:10px;
+}
+
 .exchange-rate{
     text-align: center;   
 }
 
 .exchange-rate h5{
     text-transform: uppercase;
-    color: green;
+    color: #009973;
 }
 
 .exchange-rate samp{
@@ -82,3 +78,97 @@ button{
     font-weight: 500;
 }
 
+.contenedor {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center; 
+}
+
+.conversor,.formulario {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    width: 45%;
+    max-width: 480px;
+    box-shadow: 0 0 5px, 0 5px 10px;
+    overflow: hidden;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+  } 
+
+.formulario h2{
+    color: #009973 ;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.formulario{
+    text-align: center;   
+}
+
+  .formulario label, .formulario input {
+    width: 100%;
+  }
+  
+  .placeholder-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ccc;
+    font-size: 14px;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .input:focus + .placeholder-label {
+    top: 10px;
+    font-size: 12px;
+    color: #777;
+  }
+
+  .formulario input {
+    height: 40px;
+    margin-bottom: 10px;
+}
+  
+  .formulario button {
+    float: right;
+    
+  }
+  
+  .formulario input {
+    font-size: 16px;
+    border-radius: 10px;
+    
+  }
+
+  .formulario button {
+    float: right;
+    height: 50px;
+    font-size: 25px;
+
+  }
+  
+  .formulario button {
+  color: #666;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.formulario button:hover {
+  background-color: #ddd;
+}
+
+.formulario button:disabled {
+  cursor: not-allowed;
+}
+
+.formulario button[type="submit"]:enabled {
+  background-color: #009973;
+  color: white;
+}
