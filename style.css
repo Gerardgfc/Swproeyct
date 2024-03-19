@@ -1,0 +1,84 @@
+body{
+    background: linear-gradient(to right, #003366, #33cccc );
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    padding: 0px;
+    font-weight: bold;
+    font-size: 17px;
+    
+  }
+  
+  .encabezado_izquierda {
+    display: flex;
+    align-items: center;
+  }
+  
+  .encabezado_izquierda img {
+    margin-right: 10px;
+  }
+  
+  .encabezado_izquierda nav {
+    margin: 0;
+  }
+  
+  .encabezado_izquierda ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .encabezado_izquierda li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .encabezado_izquierda a {
+    text-decoration: none;
+    color:#000000;
+  }
+  
+  .encabezado_izquierda a:hover {
+    color: #ffffff;
+  }
+  
+  .encabezado_derecha {
+    display: flex;
+    align-items: center;
+    margin-right: 100px;
+  }
+  
+  .encabezado_derecha nav {
+    margin: 0;
+  }
+  
+  .encabezado_derecha ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .encabezado_derecha li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .encabezado_derecha a {
+    text-decoration: none;
+    color: #000000;
+  }
+  
+  .encabezado_derecha a:hover {
+    color: #ffffff;
+  }
+  
+  #modena_uno {
+    background-image: url("https://logodownload.org/wp-content/uploads/2014/10/paypal-logo-2.png");
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding-right: 30px;
+  }
+  
