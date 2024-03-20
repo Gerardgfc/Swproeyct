@@ -204,7 +204,7 @@
     
     .formulario button {
       float: right;
-      
+      border-radius: 10px;
     }
     
     .formulario input {
@@ -241,4 +241,29 @@
     color: white;
   }
   
-    
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  footer .img-pie {
+    margin: 0 auto;
+    width: 150px;
+  }
+  
+  footer .bases {
+    text-align: right;
+    font-size: 14px;
+    margin-right: 100px;
+  }
+  
+  
+  
