@@ -38,15 +38,42 @@
     <!---Fin Encabezado-->
     <!---Inicio Cuerpo-->
     <main>
-        <!--Inicio Conversor-->
-        <div class="conversor">
-            <select id="modena_uno">
-                <option value="Paypal">Paypal</option>
-            </select>
+        <div class="contenedor">
+            <div class="conversor">
+                <div class="controls" id="controls">
+                    <p id="error-message"></p>
+                    <div class="control">
+                      <img src="../img/paypal.png" alt="Paypal">
+                      <input type="number" id="base-input" value="5" min="5" step="0.1"/>
+                    </div>
+                    <div class="control">
+                      <img src="../img/pesos_arg.png" alt="Pesos Argentinos">
+                      <input type="number" id="target-id" value="0" readonly />
+                    </div>
+                    
+                  </div>          
+                <div class="exchange-rate">
+                    <h5>Intercambio</h5>
+                    <samp id="exchange-rate">Actualizando cotización..</samp>
+                </div>
+            </div>
+            <div class="formulario">
+                <h2>Formulario de contacto</h2>
+                <form action="#">
+                    
+                  <input type="text" id="nombre" name="nombre" placeholder="Nombre y Apellido" required>
 
-            
-        </div>
-        <!--Fin Conversor-->
+                  <input type="email" id="correo_electronico" name="correo_electronico" placeholder="Correo electrónico" required>
+                  
+                  <input type="number" id="numero_whatsapp" name="numero_whatsapp" placeholder="Número de Whatsapp" required>
+                  
+                  <input type="email" id="correo_paypal" name="correo_paypal" placeholder="Correo electrónico de Paypal" required>
+                  
+                  <input type="text" id="cbu" name="cbu" placeholder="CBU/CVU/Alias para Transferencia bancaria Argentina" required>
+                  <button type="submit" onclick="verificarFormulario()">Enviar</button>
+                </form>
+              </div>
+            </div>
     </main>
     <!---Fin Cuerpo-->
 </body>
