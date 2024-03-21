@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
             return data.venta; // Extrae el valor de "venta" del JSON
         } catch (error) {
             console.error("Error:", error);
-            return null; // Maneja el error y devuelve null
+            return null;
         }
     }
     
@@ -101,14 +101,13 @@ document.addEventListener("DOMContentLoaded", function() {
             // Mensaje a enviar
             const mensaje = `**Formulario de contacto:**\n\nNombre: ${nombre}\nCorreo electrónico: ${email}\nNúmero de Whatsapp: ${numero_whatsapp}\nCorreo electrónico de Paypal: ${correo_paypal}\nCBU/CVU/Alias para Transferencia bancaria Argentina: ${cbu}\nEnvía a PayPal: ${baseInput}\nRecibe en ARS: ${targetInput}`;
 
-            // Reemplaza 'YOUR_BOT_TOKEN' con el token de tu bot de Telegram
             const BOT_TOKEN = '7163602387:AAGicK3mKJEw2mVEdTXSrutEvHpMyu_Mp2c';
         
             // Prepara los datos para el envío
             const data = {
-                chat_id: '1840071442', // ID del chat del bot
+                chat_id: '1840071442', 
                 text: mensaje,
-                parse_mode: 'Markdown', // Opcional: usa formato Markdown en el mensaje
+                parse_mode: 'Markdown',
             };
         
             // Envía los datos al bot

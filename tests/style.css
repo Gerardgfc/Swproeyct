@@ -2,11 +2,13 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "Outfit", sans-serif;
+    font-family:"Roboto (ttf)",sans-serif;;
     }
   body{
       background: linear-gradient(to right, #003366, #33cccc );
   }
+
+  /*Encabezado*/
   header {
       display: flex;
       justify-content: space-between;
@@ -15,9 +17,16 @@
       padding: 0px;
       font-weight: bold;
       font-size: 17px;
-      
+      margin-bottom: 50px;
+      /**/
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: linear-gradient(to right, #003366, #33cccc );
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     }
-    
+
     .encabezado_izquierda {
       display: flex;
       align-items: center;
@@ -25,6 +34,7 @@
     
     .encabezado_izquierda img {
       margin-right: 10px;
+      margin-left: 70px;
     }
     
     .encabezado_izquierda nav {
@@ -81,12 +91,26 @@
       color: #ffffff;
     }
     
-    button{
-      border: none;
-      cursor: pointer;
-      font-size: 1rem;
+    /*Contenedor de Conversor y Formulario*/
+
+    .contenedor {
+      display: flex;
+      justify-content: space-around; 
+      align-items: center; 
   }
-  
+
+  .conversor,.formulario {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      width: 45%;
+      max-width: 480px;
+      box-shadow: 0 0 5px, 0 5px 10px;
+      overflow: hidden;
+  }
+
+  /*Conversor*/
+ 
   .controls{
       display: grid;
       gap: 20px;
@@ -94,8 +118,9 @@
   }
   .control{
       display: flex;
+      align-items: center;
       background: var(input-background);
-      box-shadow: inset 0 0 3px #000;
+      box-shadow: inset 0 0 3px #000000;
       border-radius: 10px;
       overflow: hidden;
   }
@@ -106,6 +131,8 @@
       display: flex;
       align-items: center;
       gap: 10px;
+      height: auto; 
+      margin-right: 10px; 
   }
   
   .control input{
@@ -113,9 +140,10 @@
       text-align: end;
       background: transparent;
       width: 100%;
-      border-radius: 10px;
+      border-radius: 100px;
       outline: none;
       padding: 10px 20px;
+      flex: 1;
   }
   
   .control input::-webkit-inner-spin-button,
@@ -129,7 +157,7 @@
       font-size: 1rem;
       padding:10px;
   }
-  
+  /*Cantidad de cambio*/
   .exchange-rate{
       text-align: center;   
   }
@@ -137,6 +165,7 @@
   .exchange-rate h5{
       text-transform: uppercase;
       color: #009973;
+      margin-top: 10px;
   }
   
   .exchange-rate samp{
@@ -146,21 +175,8 @@
       font-weight: 500;
   }
   
-  .contenedor {
-      display: flex;
-      justify-content: space-around; 
-      align-items: center; 
-  }
   
-  .conversor,.formulario {
-      background: #fff;
-      padding: 30px;
-      border-radius: 10px;
-      width: 45%;
-      max-width: 480px;
-      box-shadow: 0 0 5px, 0 5px 10px;
-      overflow: hidden;
-  }
+  /*Formulario*/
   
   .formulario {
       display: flex;
@@ -180,7 +196,7 @@
     .formulario label, .formulario input {
       width: 100%;
     }
-    
+    /*Dentro del formulario*/
     .placeholder-label {
       position: absolute;
       top: 50%;
@@ -200,33 +216,24 @@
     .formulario input {
       height: 40px;
       margin-bottom: 10px;
-  }
-    
-    .formulario button {
-      float: right;
-      border-radius: 10px;
-    }
-    
-    .formulario input {
+      padding-left: 10px;
       font-size: 16px;
       border-radius: 10px;
-      
-    }
-  
+  }
+
+    /*Botón de formulario*/
     .formulario button {
       float: right;
+      border-radius: 10px;
       height: 50px;
-      font-size: 25px;
-  
+      color: #666;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+      border: none;
     }
     
-    .formulario button {
-    color: #666;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s;
-  }
   
   .formulario button:hover {
     background-color: #ddd;
@@ -240,11 +247,14 @@
     background-color: #009973;
     color: white;
   }
+    
+  /*Pie*/
   
   footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 1px 15px rgba(0, 0, 0, 0.1);
   }
   
   footer {
@@ -252,17 +262,28 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    margin-top: 50px;
+  }
+  
+  .redes {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   width: 75px;
+   margin-left: 10%;
+   gap: 10px;
   }
   
   footer .img-pie {
     margin: 0 auto;
-    width: 150px;
+    margin-left: 30%;
   }
   
   footer .bases {
     text-align: right;
     font-size: 14px;
     margin-right: 100px;
+    color: #474747;
+    font-style: unset;
   }
   
   
